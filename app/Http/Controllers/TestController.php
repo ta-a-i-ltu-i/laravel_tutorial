@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Test;
 
 class TestController extends Controller
 {
     //
     public function index()
     {
-        return view('tests/test');
+        $values = Test::all();
+        $tests = DB::table('tests')->get();
+        dd($tests);
+
+        return view('tests/test', compact('values'));
     }
 }

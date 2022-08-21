@@ -12,9 +12,14 @@ return new class () extends Migration {
      */
     public function up()
     {
-        Schema::create('tests', function (Blueprint $table) {
+        Schema::create('contact_forms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('text', 100);
+            $table->string('your_name', 20);
+            $table->string('email', 255);
+            $table->longText('url')->nullable($value = true);
+            $table->boolean('gender');
+            $table->tinyInteger('age');
+            $table->string('contact', 200);
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ return new class () extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('tests');
+        Schema::dropIfExists('contact_forms');
     }
 };
