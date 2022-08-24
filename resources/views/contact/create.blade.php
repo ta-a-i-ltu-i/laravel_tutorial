@@ -13,11 +13,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <!-- <form method="GET" action="{{ route('contact.index') }}">
-                        <button type="submit" class="btn btn-primary">
-                            新規登録
-                        </button>
-                    </form> -->
+                    
+                    @if($errors->any())
+                    <div class="alert alert-danger">
+                        <ui>
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ui>
+                    </div>
+                    @enderror
 
                     createです
                     <form method="POST" action="{{ route('contact.store') }}">
