@@ -24,7 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
         // Paginator::defaultView('index.blade.php');
         Paginator::useBootstrap();
     }
