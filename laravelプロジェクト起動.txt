@@ -1,0 +1,9 @@
+laravelプロジェクト起動
+・XAMMPで「apache」「mysql」を立ち上げる
+
+
+・サーバを立ち上げる
+　PS C:\laravel> php artisan serve
+
+・プロジェクトをビルド(コンパイル)
+　C:\laravel> npm run dev
